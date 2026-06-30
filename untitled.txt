@@ -1,1 +1,9 @@
 yes_no_cols = ['']
+
+import seaborn as sns 
+cm = tf.math.confusion_matrix(labels=y_test, predictions=y_pred)
+
+plt.figure(figsize = (10, 7))
+sns.heatmap(cm, annot=True, fmt='d')
+plt.xlabel('Predicted'  )
+plt.ylabel('Truth')
